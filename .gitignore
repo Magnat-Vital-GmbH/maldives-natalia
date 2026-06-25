@@ -1,0 +1,5 @@
+.DS_Store
+.netlify/
+.vercel/
+_versions/
+_preview*.html
