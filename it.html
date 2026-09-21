@@ -347,6 +347,9 @@
   .price-card__date{font-family:var(--f-disp);font-size:clamp(1.4rem,3.6vw,2rem);color:var(--ink);line-height:1.1}
   .price-card__detail{color:var(--ink-soft);font-size:1rem}
   .price-card__price{margin-top:.6em;font-weight:700;font-size:clamp(1.15rem,2.6vw,1.4rem);color:var(--lagoon)}
+  .price-card--wide{grid-column:1/-1}
+  .price-card__text{margin-top:.5em;color:var(--ink-soft);font-weight:300;max-width:60ch}
+  .price-card__price--soft{font-weight:600;font-size:clamp(1rem,2.2vw,1.12rem)}
   .dates__note{margin-top:clamp(22px,4vw,30px);color:var(--ink-soft);max-width:62ch;font-weight:300;
     font-size:clamp(1rem,2vw,1.12rem)}
   .dates__deposit{margin-top:1.1em;display:inline-flex;align-items:center;gap:.6em;font-weight:600;color:var(--ink)}
@@ -526,11 +529,14 @@
       <span class="eyebrow rise">Date e prezzi</span>
       <h2 class="rise">Prossimi viaggi alle Maldive 🇲🇻</h2>
       <div class="dates__grid">
-        <div class="price-card rise"><div class="price-card__date">Agosto 2026</div><div class="price-card__detail">Partenze durante tutto il mese</div><div class="price-card__price">da $1.570</div></div>
         <div class="price-card rise"><div class="price-card__date">24–31 ottobre 2026</div><div class="price-card__detail">Ritiro yoga d'autore</div><div class="price-card__price">$1.800</div></div>
+        <div class="price-card rise"><div class="price-card__date">Novembre 2026</div><div class="price-card__detail">Partenze durante tutto il mese</div><div class="price-card__price">1.680 €</div></div>
+        <div class="price-card rise"><div class="price-card__date">Dicembre 2026</div><div class="price-card__detail">Partenze durante tutto il mese</div><div class="price-card__price">1.880 €</div></div>
+        <div class="price-card rise"><div class="price-card__date">Gennaio 2027</div><div class="price-card__detail">Partenze durante tutto il mese</div><div class="price-card__price">1.800 €</div></div>
+        <div class="price-card price-card--wide rise"><div class="price-card__date">Isola disabitata</div><div class="price-card__detail">Da 1 a 10 giorni</div><p class="price-card__text">Un'isola senza resort costosi, senza strade e senza persone — solo tu, l'oceano e la sabbia bianca. Vieni per un giorno o fermati per la notte. Scegli tu il formato e la durata.</p><div class="price-card__price price-card__price--soft">Programma e prezzi su richiesta</div></div>
       </div>
       <p class="dates__note rise">Piccoli gruppi, isole suggestive, un oceano turchese, snorkeling con le tartarughe, isole disabitate e le vere Maldive senza il trambusto turistico.</p>
-      <p class="dates__deposit rise"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v6"/><circle cx="12" cy="16.5" r=".1"/></svg>Per riservare un posto — un acconto di $300</p>
+      <p class="dates__deposit rise"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v6"/><circle cx="12" cy="16.5" r=".1"/></svg>Per riservare un posto — un acconto di 300 €</p>
       <a class="btn rise" href="#book">Prenota il tuo posto</a>
     </div>
   </section>
