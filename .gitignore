@@ -6,3 +6,6 @@ _preview*.html
 # Interne Arbeitsunterlagen, duerfen nicht auf GitHub Pages landen
 Malediven/
 *_Startprompt_*.md
+# Interne Notizen und Nachrichtenentwuerfe, gehoeren nicht auf die Webseite
+*_Nachricht_*.txt
+*_Notiz_*.txt
