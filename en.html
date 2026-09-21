@@ -4,8 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Maldives with Natalia — a curated journey</title>
-<meta name="description" content="A curated journey to a local Maldivian island with Natalia. A small group, a ready-made programme, ocean every day: dolphins, nurse sharks, reefs, sandbanks and sunsets.">
+<meta name="description" content="A curated journey to a local Maldivian island with Natalia. A small group, a ready-made 7-day programme, ocean every day: dolphins, reefs and sunsets.">
 <meta name="theme-color" content="#06212E">
+<link rel="preload" as="image" href="media/hero/poster.jpg" fetchpriority="high">
 <link rel="canonical" href="https://toursbynatalie.com/en.html">
 <link rel="alternate" hreflang="ru" href="https://toursbynatalie.com/">
 <link rel="alternate" hreflang="en" href="https://toursbynatalie.com/en.html">
@@ -303,7 +304,8 @@
   /* hero: видео заполняет фон, постер — fallback */
   video.hero__media{width:100%;height:100%;object-fit:cover}
   /* фото в плейсхолдерах: заполняют рамку, сохраняют скруглание */
-  .media > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  picture{display:contents}
+  .media > img,.media > picture > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .media{color:transparent}
   /* mood: большая первая ячейка остаётся 16:9, остальные — портрет */
   .mood__grid .media{min-height:160px}
@@ -315,7 +317,7 @@
     background:linear-gradient(180deg,rgba(6,33,46,.15) 0%,rgba(6,33,46,.05) 45%,rgba(6,33,46,.72) 100%)}
   .atmos__cap{position:relative;z-index:2}
   /* island / author: фото вместо плейсхолдера */
-  .island .media > img,.author .media > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .island .media > img,.author .media > img,.island .media > picture > img,.author .media > picture > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   /* ===== ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА ===== */
   .nav__actions{display:flex;align-items:center;gap:12px}
   .lang{display:inline-flex;gap:2px;border:1px solid var(--line-d);border-radius:100px;
@@ -366,6 +368,7 @@
       "@id": "https://toursbynatalie.com/#agency",
       "name": "Tours by Natalie",
       "url": "https://toursbynatalie.com/",
+      "telephone": "+201226883355",
       "description": "Curated journeys to the Maldives with Natalia: a local island, a small group, a ready-made programme.",
       "image": "https://toursbynatalie.com/media/hero/poster.jpg",
       "areaServed": {
@@ -397,7 +400,7 @@
       "@type": "TouristTrip",
       "@id": "https://toursbynatalie.com/en.html#trip",
       "name": "The Maldives with Natalia — a curated journey",
-      "description": "A curated journey to a local Maldivian island with Natalia. A small group, a ready-made programme, ocean every day: dolphins, nurse sharks, reefs, sandbanks and sunsets.",
+      "description": "A curated journey to a local Maldivian island with Natalia. A small group, a ready-made 7-day programme, ocean every day: dolphins, reefs and sunsets.",
       "url": "https://toursbynatalie.com/en.html",
       "image": "https://toursbynatalie.com/media/hero/poster.jpg",
       "provider": {
@@ -509,9 +512,9 @@
 <main id="top">
 
   <section class="hero">
-    <video class="hero__media" autoplay muted loop playsinline preload="auto"
-           poster="media/hero/poster.jpg" aria-hidden="true">
-      <source src="media/hero/hero.mp4" type="video/mp4">
+    <video class="hero__media" autoplay muted loop playsinline preload="none"
+           poster="media/hero/poster.jpg" aria-hidden="true"
+           data-src="media/hero/hero.mp4" data-desktop-only="1">
     </video>
     <div class="hero__scrim" aria-hidden="true"></div>
     <div class="hero__in wrap">
@@ -528,13 +531,13 @@
   <section class="section mood">
     <div class="wrap">
       <div class="mood__grid rise">
-        <div class="media"><video class="mood-vid" autoplay muted loop playsinline preload="metadata" poster="media/mood/mood-1-poster.jpg" aria-label="Video: nurse sharks by the island shore"><source src="media/mood/mood-1.mp4" type="video/mp4"></video></div>
-        <div class="media"><img src="media/mood/mood-2.jpg" alt="A swing on a palm tree over a clear lagoon" loading="lazy" decoding="async"></div>
+        <div class="media"><video class="mood-vid" autoplay muted loop playsinline preload="none" poster="media/mood/mood-1-poster.jpg" aria-label="Video: nurse sharks by the island shore" data-src="media/mood/mood-1.mp4"></video></div>
+        <div class="media"><picture><source srcset="media/mood/mood-2.webp" type="image/webp"><img src="media/mood/mood-2.jpg" alt="A swing on a palm tree over a clear lagoon" loading="lazy" decoding="async"></picture></div>
         <div class="media"><img src="media/mood/mood-3.jpg" alt="Coral reef with bright tropical fish" loading="lazy" decoding="async"></div>
-        <div class="media"><img src="media/mood/mood-4.jpg" alt="Swimming with nurse sharks in the shallows" loading="lazy" decoding="async"></div>
-        <div class="media"><img src="media/mood/mood-5.jpg" alt="Dolphins in the ocean at sunset" loading="lazy" decoding="async"></div>
-        <div class="media"><img src="media/mood/mood-6.jpg" alt="Sunset fishing from the boat" loading="lazy" decoding="async"></div>
-        <div class="media"><img src="media/mood/mood-7.jpg" alt="Maldivian islands and atolls from above" loading="lazy" decoding="async"></div>
+        <div class="media"><picture><source srcset="media/mood/mood-4.webp" type="image/webp"><img src="media/mood/mood-4.jpg" alt="Swimming with nurse sharks in the shallows" loading="lazy" decoding="async"></picture></div>
+        <div class="media"><picture><source srcset="media/mood/mood-5.webp" type="image/webp"><img src="media/mood/mood-5.jpg" alt="Dolphins in the ocean at sunset" loading="lazy" decoding="async"></picture></div>
+        <div class="media"><picture><source srcset="media/mood/mood-6.webp" type="image/webp"><img src="media/mood/mood-6.jpg" alt="Sunset fishing from the boat" loading="lazy" decoding="async"></picture></div>
+        <div class="media"><picture><source srcset="media/mood/mood-7.webp" type="image/webp"><img src="media/mood/mood-7.jpg" alt="Maldivian islands and atolls from above" loading="lazy" decoding="async"></picture></div>
       </div>
       <p class="lead rise">The real Maldives — ocean, islands and life surrounded by nature.</p>
     </div>
@@ -575,11 +578,11 @@
 
   <section class="atmos">
     <div class="atmos__row">
-      <div class="atmos__cell rise"><img class="atmos__img" src="media/atmos/ocean.jpg" alt="Open ocean and turquoise water" loading="lazy" decoding="async"><span class="atmos__cap">ocean</span></div>
-      <div class="atmos__cell rise"><img class="atmos__img" src="media/atmos/lagoon.jpg" alt="Atoll lagoon from above" loading="lazy" decoding="async"><span class="atmos__cap">lagoon</span></div>
-      <div class="atmos__cell rise"><img class="atmos__img" src="media/atmos/island.jpg" alt="A green island in the ocean" loading="lazy" decoding="async"><span class="atmos__cap">island</span></div>
-      <div class="atmos__cell rise"><img class="atmos__img" src="media/atmos/calm.jpg" alt="Stillness and calm on the shore" loading="lazy" decoding="async"><span class="atmos__cap">stillness</span></div>
-      <div class="atmos__cell rise"><img class="atmos__img" src="media/atmos/sunset.jpg" alt="Sunset over the island" loading="lazy" decoding="async"><span class="atmos__cap">sunset</span></div>
+      <div class="atmos__cell rise"><picture><source srcset="media/atmos/ocean.webp" type="image/webp"><img class="atmos__img" src="media/atmos/ocean.jpg" alt="Open ocean and turquoise water" loading="lazy" decoding="async"></picture><span class="atmos__cap">ocean</span></div>
+      <div class="atmos__cell rise"><picture><source srcset="media/atmos/lagoon.webp" type="image/webp"><img class="atmos__img" src="media/atmos/lagoon.jpg" alt="Atoll lagoon from above" loading="lazy" decoding="async"></picture><span class="atmos__cap">lagoon</span></div>
+      <div class="atmos__cell rise"><picture><source srcset="media/atmos/island.webp" type="image/webp"><img class="atmos__img" src="media/atmos/island.jpg" alt="A green island in the ocean" loading="lazy" decoding="async"></picture><span class="atmos__cap">island</span></div>
+      <div class="atmos__cell rise"><picture><source srcset="media/atmos/calm.webp" type="image/webp"><img class="atmos__img" src="media/atmos/calm.jpg" alt="Stillness and calm on the shore" loading="lazy" decoding="async"></picture><span class="atmos__cap">stillness</span></div>
+      <div class="atmos__cell rise"><picture><source srcset="media/atmos/sunset.webp" type="image/webp"><img class="atmos__img" src="media/atmos/sunset.jpg" alt="Sunset over the island" loading="lazy" decoding="async"></picture><span class="atmos__cap">sunset</span></div>
     </div>
   </section>
 
@@ -590,7 +593,7 @@
         <h2>Life where the locals live</h2>
         <p>We stay on a local island — among local residents and the real island atmosphere.</p>
       </div>
-      <div class="media media--ratio rise"><img src="media/island/island.jpg" alt="Boats by a local island on turquoise water" loading="lazy" decoding="async"></div>
+      <div class="media media--ratio rise"><picture><source srcset="media/island/island.webp" type="image/webp"><img src="media/island/island.jpg" alt="Boats by a local island on turquoise water" loading="lazy" decoding="async"></picture></div>
     </div>
   </section>
 
@@ -651,9 +654,9 @@
 
   <section class="section author">
     <div class="wrap author__grid">
-      <div class="media media--ratio rise"><img src="media/author/natalia.jpg" alt="Natalia on the shore — your host and guide" loading="lazy" decoding="async"></div>
+      <div class="media media--ratio rise"><picture><source srcset="media/author/natalia.webp" type="image/webp"><img src="media/author/natalia.jpg" alt="Natalia on the shore — your host and guide" loading="lazy" decoding="async"></picture></div>
       <div class="rise">
-        <img class="author__face" src="media/author/face.jpg" alt="Natalia — your host and guide" loading="lazy" decoding="async">
+        <picture><source srcset="media/author/face.webp" type="image/webp"><img class="author__face" src="media/author/face.jpg" alt="Natalia — your host and guide" loading="lazy" decoding="async"></picture>
         <span class="eyebrow">Your guide</span>
         <h2>My name is Natalia</h2>
         <p>I organise curated journeys around the Maldives. Over the years I've visited 33 islands, explored the archipelago from end to end, and I know not only the most beautiful spots but also the local culture, traditions, everyday life and the way the islanders live.</p>
@@ -734,6 +737,27 @@
   } else {
     document.querySelectorAll('.rise').forEach(function(el){ el.classList.add('in'); });
   }
+
+  var vids = document.querySelectorAll('video[data-src]');
+  var ladeVideo = function(v){
+    if(v.dataset.loaded) return;
+    v.dataset.loaded = '1';
+    var s = document.createElement('source');
+    s.src = v.dataset.src; s.type = 'video/mp4';
+    v.appendChild(s); v.load();
+    var p = v.play(); if(p && p.catch){ p.catch(function(){}); }  // nachtraeglich eingehaengte Quelle startet nicht von selbst
+  };
+  var kleinerBildschirm = window.matchMedia('(max-width: 767px)').matches;
+  vids.forEach(function(v){
+    if(reduce) return;                                  // Bewegung unerwuenscht: Poster genuegt
+    if(kleinerBildschirm && v.dataset.desktopOnly) return;  // Mobil: Hero-Video wird nicht geladen
+    if('IntersectionObserver' in window){
+      var vo = new IntersectionObserver(function(es){
+        es.forEach(function(e){ if(e.isIntersecting){ ladeVideo(e.target); vo.unobserve(e.target); } });
+      }, {rootMargin:'0px'});
+      vo.observe(v);
+    } else { ladeVideo(v); }
+  });
 
   document.getElementById('book-btn').addEventListener('click', function(){
     var name = (document.getElementById('f-name').value || '').trim();
