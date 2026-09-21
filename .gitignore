@@ -3,3 +3,6 @@
 .vercel/
 _versions/
 _preview*.html
+# Interne Arbeitsunterlagen, duerfen nicht auf GitHub Pages landen
+Malediven/
+*_Startprompt_*.md
